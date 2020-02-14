@@ -1,0 +1,49 @@
+Csapatok alkotása...
+
+Verziókövetõ rendszer:
+- svn
+- git <- Use this. (Konzolos gitet majd)
+	- repository
+		- .git folder <- metaadatok tárolása 		(verziók, változások stb.)
+		- gitignore (amiket ignorál a github, pl. 		buildek stb.)
+	- branch <- fejlesztési ágak (hogy egymás 	fejlesztésébe ne nyúljunk bele)
+	- commit
+		- message
+		- hash
+		- content
+
+Általában van egy master, ami aztán tesztelésre kerül, majd ha jól mûködik akkor átkerül a productionbe.
+
+Egy fejlesztés kinézete (lineáris, single):
+		        -1      -2
+		    +5  +2  -3  +4 +10
+	[master> | - O - O - O - O - O
+	base state     commits      head
+
+Basic mûveletek gyakorlása
+Új repo:
+	- gitignore
+	- licenszek (vannak nyílt forráskódú licenszek)
+		- Apache <- Köztes
+		- GNU <- Aggresszív
+		- MIT <- Engedékeny
+	- public/private
+	etc.
+
+Parancsok (BASH-ban): (ctrl + click = menu)
+git clone <url of repo>
+git branch
+git add <- commitra elõkészít (staging)
+	--all <- ezzel a folderben mindent kiválasztunk
+git reset
+git commit -m "commit message"
+git push (ha a git config megvan)
+vagy git push origin master
+git pull <url of repo> vagy origin master
+git checkout
+
+*alapértelmezett remote: github origin
+
+Git Graph -> VS Code
+
+HF -> branchekrõl merge (mindenkinél)
